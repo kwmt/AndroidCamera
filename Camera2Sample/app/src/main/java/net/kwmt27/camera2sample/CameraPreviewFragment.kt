@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProviders
+import androidx.fragment.app.viewModels
 
 class CameraPreviewFragment : Fragment() {
 
-    private lateinit var viewModel: CameraPreviewViewModel
+    private val viewModel: CameraPreviewViewModel by viewModels()
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -20,7 +20,6 @@ class CameraPreviewFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(CameraPreviewViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
