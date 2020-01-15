@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/fragment">
+    app:startDestination="@id/permissions_fragment"
+    >
 
     <fragment
-        android:id="@+id/fragment"
-        android:name="net.kwmt27.camera2sample.CameraPreviewFragment" />
+        android:id="@+id/permissions_fragment"
+        android:name="net.kwmt27.camera2sample.PermissionFragment"
+        android:label="PermissionFragment"
+        >
+        <action
+            android:id="@+id/action_permissions_fragment_to_camera_preview_fragment"
+            app:destination="@id/camera_preview_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/camera_preview_fragment"
+        android:name="net.kwmt27.camera2sample.CameraPreviewFragment"
+        />
 </navigation>
