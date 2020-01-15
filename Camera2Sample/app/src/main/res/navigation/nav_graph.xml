@@ -14,6 +14,8 @@
         <action
             android:id="@+id/action_permissions_fragment_to_camera_preview_fragment"
             app:destination="@id/camera_preview_fragment"
+            app:popUpTo="@id/permissions_fragment"
+            app:popUpToInclusive="true"
             />
     </fragment>
 
